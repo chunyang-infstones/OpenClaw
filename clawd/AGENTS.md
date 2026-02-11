@@ -200,7 +200,7 @@ The goal: Be helpful without being annoying. Check in a few times a day, do usef
 ### Discord
 - DM → Reply directly
 - Channel → MUST reply in thread (use replyTo = message_id)
-- Requires @mention to trigger response (unless configured for proactive monitoring)
+- Language: Match user's language
 
 ### ⚠️ Output Security (CRITICAL)
 Replies on external channels (Discord, Slack) **MUST NOT contain internal information**:
