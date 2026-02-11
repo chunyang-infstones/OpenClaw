@@ -150,25 +150,43 @@ openclaw gateway
 
 ## Step 7: First Conversation
 
-### Option A: Web Chat (Recommended for Setup)
+Choose the method that fits your environment:
+
+### Option A: CLI Chat (Recommended for VPS/Headless)
 
 ```bash
-# Open web interface
-openclaw chat
+# Send first message directly
+openclaw chat -m "Hello! Please read BOOTSTRAP.md and complete the onboarding process."
+
+# Or start interactive CLI chat
+openclaw
 ```
 
-This opens `http://localhost:18789` in your browser.
+### Option B: Via Slack/Discord Channel
 
-### Option B: CLI Chat
+If you've already configured channels (Step 8), just:
+1. Go to the configured Slack/Discord channel
+2. Mention the agent: `@AgentName Hello! Please read BOOTSTRAP.md and complete onboarding.`
 
+### Option C: Web Chat (Local Machine or SSH Tunnel)
+
+For local machines with a browser:
 ```bash
-# Start CLI chat
-openclaw
+openclaw chat
+# Opens http://localhost:18789
+```
+
+For VPS without browser, use SSH port forwarding:
+```bash
+# On your local machine, create tunnel to VPS
+ssh -L 18789:localhost:18789 user@your-vps-ip
+
+# Then open http://localhost:18789 in your local browser
 ```
 
 ### First Message
 
-Send this as your first message to trigger the bootstrap process:
+Send this to trigger the bootstrap process:
 
 ```
 Hello! I'm ready to begin. Please read BOOTSTRAP.md and complete the onboarding process.
