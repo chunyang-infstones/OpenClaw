@@ -58,6 +58,33 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - `trash` > `rm` (recoverable beats gone forever)
 - When in doubt, ask.
 
+## 📁 Workspace Structure (CANNOT VIOLATE)
+
+**DO NOT create new files or folders directly under `clawd/`.**
+
+The root-level structure is fixed:
+```
+clawd/
+├── AGENTS.md, BOOTSTRAP.md, SOUL.md, ... (🔒 system files)
+├── memory/      (daily logs, MEMORY.md)
+├── skills/      (agent skills)
+├── scripts/     (utility scripts)
+├── canvas/      (canvas assets)
+└── team/        (✏️ YOUR workspace)
+```
+
+**All agent-created content goes in `team/`:**
+- New documents → `team/`
+- Project files → `team/`
+- Notes, drafts, exports → `team/`
+- Anything you create → `team/`
+
+The only exceptions:
+- `memory/YYYY-MM-DD.md` daily logs
+- `MEMORY.md` updates
+- `HEARTBEAT.md` updates
+- `TOOLS.md` updates (local config notes)
+
 ## External vs Internal
 
 **Safe to do freely:**
