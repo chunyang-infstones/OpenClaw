@@ -1,3 +1,18 @@
-# clawdbot runtime / secrets
+# OpenClaw runtime / secrets
 .clawdbot/agents/**/sessions/
 .clawdbot/**/.env
+.clawdbot/
+
+# Secrets
+.secrets.json
+*.secrets.json
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
+
+# Memory files (optional - team can choose to track or not)
+# clawd/memory/
+# clawd/MEMORY.md

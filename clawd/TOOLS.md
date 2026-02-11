@@ -1,30 +1,36 @@
 # TOOLS.md - Local Notes
 
+> ✏️ CUSTOM - 此文件由 Team 自定义
+
 Skills define *how* tools work. This file is for *your* specifics — the stuff that's unique to your setup.
 
 ## What Goes Here
 
 Things like:
-- Camera names and locations
+- API endpoints and credentials references
 - SSH hosts and aliases  
 - Preferred voices for TTS
-- Speaker/room names
+- Channel IDs and names
 - Device nicknames
 - Anything environment-specific
 
 ## Examples
 
 ```markdown
-### Cameras
-- living-room → Main area, 180° wide angle
-- front-door → Entrance, motion-triggered
+### Slack Channels
+- #team-alerts → C0XXXXXX (escalation)
+- #daily-standup → C0YYYYYY
+
+### Discord
+- Guild ID: 1234567890
+- Support Channel: 9876543210
+
+### APIs
+- Jira: credentials in .secrets.json
+- GitHub: use personal access token
 
 ### SSH
 - home-server → 192.168.1.100, user: admin
-
-### TTS
-- Preferred voice: "Nova" (warm, slightly British)
-- Default speaker: Kitchen HomePod
 ```
 
 ## Why Separate?
