@@ -257,20 +257,6 @@ skills/
 
 ---
 
-## Team 列表
-
-| Team ID | 全名 | 说明 |
-|---------|------|------|
-| `dev-dos` | DevOps | 运维团队 |
-| `dev-plt` | Platform | 平台团队 |
-| `dev-app` | Application | 应用团队 |
-| `dev-bkc` | Blockchain | 区块链团队 |
-| `dev-fte` | Frontend | 前端团队 |
-| `pro-pog` | Product Operation | 产品运营（含客服 Agent） |
-| `bus-bog` | Business Operation | 商务运营 |
-| `mkt-mkt` | Marketing | 市场营销 |
-
----
 
 ## 使用指南
 
