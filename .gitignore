@@ -1,0 +1,3 @@
+# clawdbot runtime / secrets
+.clawdbot/agents/**/sessions/
+.clawdbot/**/.env
