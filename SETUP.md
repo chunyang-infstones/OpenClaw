@@ -205,36 +205,111 @@ The agent will:
 
 ### Slack
 
-1. Create a Slack app at https://api.slack.com/apps
-2. Add Bot Token Scopes: `chat:write`, `channels:history`, `groups:history`, `im:history`, `reactions:write`
-3. Install to workspace
-4. Add to OpenClaw config:
+#### 8.1 Create Slack App
+
+1. Go to https://api.slack.com/apps → **Create New App** → **From scratch**
+2. Name it (e.g., "Team Agent") and select your workspace
+
+#### 8.2 Configure Bot Permissions
+
+Go to **OAuth & Permissions** → **Scopes** → **Bot Token Scopes**, add:
+- `chat:write`
+- `channels:history`
+- `groups:history`
+- `im:history`
+- `reactions:write`
+- `users:read`
+
+#### 8.3 Enable Socket Mode
+
+Go to **Socket Mode** → Enable → Create an App-Level Token with `connections:write` scope.
+Save the `xapp-...` token.
+
+#### 8.4 Install to Workspace
+
+Go to **Install App** → Install to Workspace → Copy the `xoxb-...` Bot Token.
+
+#### 8.5 Add to OpenClaw Config
+
+Edit the config file directly (no conversation needed):
 
 ```bash
-openclaw config
+nano ~/.openclaw/openclaw.json
 ```
 
-Add under `channels.slack`:
+Add/merge this into your config:
+
 ```json
 {
-  "slack": {
-    "enabled": true,
-    "mode": "socket",
-    "accounts": {
-      "default": {
-        "botToken": "xoxb-...",
-        "appToken": "xapp-..."
+  "channels": {
+    "slack": {
+      "enabled": true,
+      "mode": "socket",
+      "dm": {
+        "policy": "allowlist",
+        "allowFrom": ["YOUR_SLACK_USER_ID"]
+      },
+      "accounts": {
+        "default": {
+          "botToken": "xoxb-your-bot-token",
+          "appToken": "xapp-your-app-token"
+        }
+      }
+    }
+  },
+  "plugins": {
+    "entries": {
+      "slack": {
+        "enabled": true
       }
     }
   }
 }
 ```
 
+**Find your Slack User ID:** Click your profile in Slack → **...** → **Copy member ID**
+
+#### 8.6 Restart and Test
+
+```bash
+openclaw restart
+
+# Check logs
+openclaw logs | grep -i slack
+```
+
+Then DM the bot in Slack to trigger the first conversation.
+
 ### Discord
 
 1. Create a Discord app at https://discord.com/developers/applications
-2. Create a bot and get the token
-3. Add to OpenClaw config under `channels.discord`
+2. Go to **Bot** → Create bot → Copy token
+3. Enable **Message Content Intent** under **Privileged Gateway Intents**
+4. Add to config:
+
+```json
+{
+  "channels": {
+    "discord": {
+      "enabled": true,
+      "accounts": {
+        "default": {
+          "token": "your-discord-bot-token"
+        }
+      }
+    }
+  },
+  "plugins": {
+    "entries": {
+      "discord": {
+        "enabled": true
+      }
+    }
+  }
+}
+```
+
+5. Invite bot to server using OAuth2 URL with `bot` scope and required permissions
 
 ---
 
