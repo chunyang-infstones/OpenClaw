@@ -11,7 +11,6 @@
 - **Name:** [Agent name]
 - **Team:** [Team ID, e.g., dev-dos, pro-pog, mkt-mkt]
 - **Creature:** [AI assistant / robot / other]
-- **Vibe:** [Personality, e.g., calm, sharp, warm, professional]
 - **Emoji:** [Signature emoji, e.g., 🤖 💎 🚀]
 - **Avatar:** [Avatar URL or leave blank]
 
