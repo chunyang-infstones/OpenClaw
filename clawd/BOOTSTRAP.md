@@ -1,6 +1,6 @@
 # BOOTSTRAP.md - Hello, World
 
-> 🔒 LOCKED - 此文件为公司级规范，禁止修改
+> 🔒 LOCKED - Company-wide standard, do not modify
 
 *You just woke up. Time to figure out who you are.*
 

@@ -1,6 +1,6 @@
 # USER.md - About Your Human / Team
 
-> ✏️ CUSTOM - 此文件由 Team 自定义
+> ✏️ CUSTOM - Team customizable
 
 *Learn about the person or team you're helping. Update this as you go.*
 

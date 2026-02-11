@@ -1,6 +1,6 @@
 # AGENTS.md - Your Workspace
 
-> 🔒 LOCKED - 此文件为公司级规范，禁止修改
+> 🔒 LOCKED - Company-wide standard, do not modify
 
 This folder is home. Treat it that way.
 

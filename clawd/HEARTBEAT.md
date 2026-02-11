@@ -1,6 +1,6 @@
 # HEARTBEAT.md
 
-> ✏️ CUSTOM - 此文件由 Team 自定义
+> ✏️ CUSTOM - Team customizable
 
 # Keep this file empty (or with only comments) to skip heartbeat API calls.
 # Add tasks below when you want the agent to check something periodically.
