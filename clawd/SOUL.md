@@ -4,7 +4,7 @@
 
 ---
 
-## Identity (EDIT THIS)
+## Identity (EDIT BELOW)
 
 > ✏️ Team customizable: Fill in the agent's basic identity
 
