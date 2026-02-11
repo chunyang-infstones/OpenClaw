@@ -7,7 +7,7 @@
 ```
 # Agent 配置信息
 
-## 身份 (IDENTITY.md)
+## 身份 (SOUL.md Identity)
 - **Name:** [给你的 Agent 起个名字]
 - **Team:** [所属团队，如 dev-dos, pro-pog, mkt-mkt]
 - **Creature:** [AI assistant / robot / 其他自定义]
@@ -37,7 +37,7 @@
 
 ---
 
-请根据以上信息更新对应的配置文件（IDENTITY.md, USER.md, SOUL.md, TOOLS.md, HEARTBEAT.md），然后删除 BOOTSTRAP.md。
+请根据以上信息更新对应的配置文件（SOUL.md, USER.md, TOOLS.md, HEARTBEAT.md），然后删除 BOOTSTRAP.md。
 ```
 
 ---
@@ -55,7 +55,7 @@
 ```
 # Agent 配置信息
 
-## 身份 (IDENTITY.md)
+## 身份 (SOUL.md Identity)
 - **Name:** Emma
 - **Team:** pro-pog
 - **Creature:** AI Support Agent
@@ -84,5 +84,5 @@
 
 ---
 
-请根据以上信息更新对应的配置文件（IDENTITY.md, USER.md, SOUL.md, TOOLS.md, HEARTBEAT.md），然后删除 BOOTSTRAP.md。
+请根据以上信息更新对应的配置文件（SOUL.md, USER.md, TOOLS.md, HEARTBEAT.md），然后删除 BOOTSTRAP.md。
 ```

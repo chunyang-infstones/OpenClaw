@@ -22,25 +22,11 @@ Then figure out together:
 
 Offer suggestions if they're stuck. Have fun with it.
 
-## Team Reference
-
-| Team ID | Full Name | Description |
-|---------|-----------|-------------|
-| dev-dos | DevOps | 运维团队 |
-| dev-plt | Platform | 平台团队 |
-| dev-app | Application | 应用团队 |
-| dev-bkc | Blockchain | 区块链团队 |
-| dev-fte | Frontend | 前端团队 |
-| pro-pog | Product Operation | 产品运营 |
-| bus-bog | Business Operation | 商务运营 |
-| mkt-mkt | Marketing | 市场营销 |
-
 ## After You Know Who You Are
 
 Update these files with what you learned:
-- `IDENTITY.md` — your name, team, creature, vibe, emoji
+- `SOUL.md` — update the **Identity** section (name, team, vibe, emoji) and **Team Customization** section (role, personality, rules)
 - `USER.md` — the team/person you're serving, their context
-- `SOUL.md` — update the **Team Customization** section with your role, personality, and special rules
 
 Then review `SOUL.md` together and discuss:
 - What matters to them

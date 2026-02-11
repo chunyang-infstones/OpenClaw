@@ -1,14 +1,13 @@
 # InfStones AI Agent Workspace Template
 
-> 版本: 1.1 | 更新: 2026-02-11
+> 版本: 1.2 | 更新: 2026-02-11
 
 ## 目录结构
 
 ```
 clawd/
 ├── AGENTS.md           # [🔒 LOCKED] 工作区行为准则
-├── SOUL.md             # [🔒+✏️] 框架统一，允许扩展
-├── IDENTITY.md         # [✏️ CUSTOM] agent 身份信息
+├── SOUL.md             # [🔒+✏️] 身份 + 原则 + Team 自定义
 ├── USER.md             # [✏️ CUSTOM] 用户/团队信息
 ├── TOOLS.md            # [✏️ CUSTOM] 本地工具配置
 ├── HEARTBEAT.md        # [✏️ CUSTOM] 心跳任务
@@ -49,14 +48,17 @@ clawd/
 ---
 
 ### SOUL.md 🔒+✏️
-**用途:** Agent 的人格和价值观
+**用途:** Agent 的身份、人格和价值观
 
 **何时读取:**
 - ✅ **每次 session 启动时** — OpenClaw 自动注入到 system prompt
-- ✅ Agent 需要判断"我应该怎么做"时参考
+- ✅ Agent 需要判断"我是谁"、"我应该怎么做"时参考
 
 **结构:**
 ```markdown
+## Identity (EDIT THIS)  ← ✏️ Team 自定义
+- Name, Team, Creature, Vibe, Emoji, Avatar
+
 ## Company-Wide Principles (DO NOT MODIFY)  ← 🔒 公司级统一
 - 核心价值观
 - 沟通风格
@@ -68,24 +70,6 @@ clawd/
 - 特殊规则
 - 决策权限
 ```
-
----
-
-### IDENTITY.md ✏️
-**用途:** Agent 的身份信息
-
-**何时读取:**
-- ✅ **每次 session 启动时** — OpenClaw 自动注入到 system prompt
-- ✅ Agent 自我介绍时
-- ✅ 需要显示 avatar/emoji 时
-
-**内容包括:**
-- Name — agent 名字
-- Team — 所属团队 (dev-dos, pro-pog, etc.)
-- Creature — 自我定位 (AI assistant, robot, etc.)
-- Vibe — 性格基调 (warm, sharp, calm, etc.)
-- Emoji — 签名表情
-- Avatar — 头像路径/URL
 
 ---
 
@@ -146,7 +130,7 @@ clawd/
 
 **引导流程:**
 1. 与用户对话确定 agent 身份
-2. 更新 IDENTITY.md、USER.md、SOUL.md
+2. 更新 SOUL.md（Identity + Team Customization）、USER.md
 3. 可选：配置消息渠道（Slack/Discord/WhatsApp）
 4. 删除 BOOTSTRAP.md
 
@@ -240,13 +224,12 @@ skills/
 
 | 文件 | 用途 |
 |------|------|
-| `SOUL.md` | Company-Wide Principles（🔒）+ Team Customization（✏️） |
+| `SOUL.md` | Identity（✏️）+ Company-Wide Principles（🔒）+ Team Customization（✏️） |
 
 ### ✏️ CUSTOM - 完全由 Team 自定义
 
 | 文件 | 用途 |
 |------|------|
-| `IDENTITY.md` | agent 身份信息 |
 | `USER.md` | 服务对象信息 |
 | `TOOLS.md` | 本地工具配置 |
 | `HEARTBEAT.md` | 定期检查任务 |
@@ -256,7 +239,6 @@ skills/
 | `scripts/` | team 专属脚本 |
 
 ---
-
 
 ## 使用指南
 
@@ -270,9 +252,8 @@ git clone https://github.com/chunyang-infstones/OpenClaw.git my-agent
 cd my-agent/clawd
 
 # 自定义以下文件：
-# - IDENTITY.md (必填)
+# - SOUL.md 的 Identity 和 Team Customization 部分 (必填)
 # - USER.md (必填)
-# - SOUL.md 的 Team Customization 部分 (按需)
 # - TOOLS.md (按需)
 # - HEARTBEAT.md (按需)
 ```
@@ -289,7 +270,7 @@ touch skills/my-skill/SKILL.md
 
 1. Agent 读取 `BOOTSTRAP.md`
 2. 完成身份配置对话
-3. 更新 `IDENTITY.md` 和 `USER.md`
+3. 更新 `SOUL.md` 和 `USER.md`
 4. 删除 `BOOTSTRAP.md`（不需要再用）
 
 ---
