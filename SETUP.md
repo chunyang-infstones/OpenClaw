@@ -66,9 +66,9 @@ Your workspace now has the standard structure:
 ```
 ~/clawd/
 ├── AGENTS.md            # 🔒 LOCKED - Workspace rules
-├── AGENT-CONFIG.md      # 📝 TEMPLATE - First-run config (delete after use)
+├── BOOTSTRAP.md         # 📝 TEMPLATE - First-run guide (agent reads & deletes)
+├── AGENT-CONFIG.md      # 📝 TEMPLATE - Team configuration (you fill in)
 ├── SOUL.md              # 🔒+✏️ LOCKED + CUSTOM - Identity & values
-├── IDENTITY.md          # ✏️ CUSTOM - Agent identity
 ├── USER.md              # ✏️ CUSTOM - User/team profile
 ├── TOOLS.md             # ✏️ CUSTOM - Tool configurations
 ├── HEARTBEAT.md         # ✏️ CUSTOM - Periodic tasks
@@ -80,6 +80,8 @@ Your workspace now has the standard structure:
 │   └── master/          # Approved knowledge
 └── canvas/              # Canvas assets
 ```
+
+Note: `IDENTITY.md` will be created automatically when the agent reads `AGENT-CONFIG.md`.
 
 ---
 
@@ -178,24 +180,17 @@ ssh -L 18789:localhost:18789 user@your-vps-ip
 
 ### First Message
 
-If using AGENT-CONFIG.md:
-
 ```
-Hello! Please read AGENT-CONFIG.md, configure yourself, and delete it.
+Hello! Please read AGENT-CONFIG.md and configure yourself.
 ```
 
 The agent will:
-1. Read AGENT-CONFIG.md
-2. Fill in IDENTITY.md, USER.md, SOUL.md, TOOLS.md, HEARTBEAT.md
-3. Delete AGENT-CONFIG.md
-4. Introduce itself
-5. Start normal operation
-
-If you manually configured files, just say hello:
-
-```
-Hello! What's your name?
-```
+1. Read BOOTSTRAP.md (引导流程)
+2. Read AGENT-CONFIG.md (配置文件)
+3. Create/populate IDENTITY.md, USER.md, SOUL.md, TOOLS.md, HEARTBEAT.md
+4. Send a brief self-introduction
+5. Delete AGENT-CONFIG.md and BOOTSTRAP.md
+6. Start normal operation
 
 ---
 

@@ -7,9 +7,9 @@ This repository provides a standardized workspace structure for all InfStones AI
 ## Quick Start
 
 1. **Clone this template** for your new agent
-2. **Configure** via `clawd/AGENT-CONFIG.md` (read once, then delete)
-3. **Customize** team-specific files (IDENTITY, USER, SOUL, TOOLS, HEARTBEAT)
-4. **Start working!**
+2. **Fill in** `clawd/AGENT-CONFIG.md` with your team's configuration
+3. **Start agent** — it will read AGENT-CONFIG.md, update all files, and introduce itself
+4. **Done!** — BOOTSTRAP.md and AGENT-CONFIG.md are deleted automatically
 
 ## File Structure
 
@@ -17,11 +17,12 @@ This repository provides a standardized workspace structure for all InfStones AI
 clawd/
 ├── AGENTS.md              # 🔒 LOCKED - Workspace behavior rules
 ├── SOUL.md                # 🔒+✏️ LOCKED + CUSTOM - Core values + team personality
-├── IDENTITY.md            # ✏️ CUSTOM - Agent identity (name, team, emoji, avatar)
+├── BOOTSTRAP.md           # 📝 TEMPLATE - First-run guide (delete after use)
+├── AGENT-CONFIG.md        # 📝 TEMPLATE - Team configuration (delete after use)
+├── IDENTITY.md            # ✏️ CUSTOM - Agent identity (created by AGENT-CONFIG)
 ├── USER.md                # ✏️ CUSTOM - Who this agent serves
 ├── TOOLS.md               # ✏️ CUSTOM - Tool configuration notes
 ├── HEARTBEAT.md           # ✏️ CUSTOM - Periodic tasks
-├── AGENT-CONFIG.md        # 📝 TEMPLATE - First-run configuration (delete after use)
 ├── MEMORY.md              # ✏️ CUSTOM - Long-term memory
 ├── memory/                # Daily logs (YYYY-MM-DD.md)
 ├── skills/                # Team-specific skills (branch-managed)
@@ -37,9 +38,9 @@ clawd/
 
 | Tag | Meaning | Example |
 |-----|---------|---------|
-| 🔒 LOCKED | Company-wide standard, do not modify | AGENTS.md |
+| 🔒 LOCKED | Company-wide standard, do not modify | AGENTS.md, BOOTSTRAP.md |
 | 🔒+✏️ LOCKED + CUSTOM | Fixed framework + team extension | SOUL.md |
-| ✏️ CUSTOM | Fully team-customizable | IDENTITY.md, USER.md |
+| ✏️ CUSTOM | Fully team-customizable | IDENTITY.md, USER.md, TOOLS.md, HEARTBEAT.md |
 | 📝 TEMPLATE | One-time configuration (delete after use) | AGENT-CONFIG.md |
 
 ## Team IDs
