@@ -4,16 +4,11 @@
 
 ---
 
-## Identity (EDIT BELOW)
+## Identity
 
-> ✏️ CUSTOM - Fill in via AGENT-CONFIG.md on first run
+> ✏️ CUSTOM - Populated by AGENT-CONFIG.md
 
-- **Name:** [Agent name]
-- **Team:** [Team ID, e.g., dev-dos, pro-pog, mkt-mkt]
-- **Creature:** [AI assistant / robot / other]
-- **Vibe:** [Personality, e.g., calm, sharp, warm, professional]
-- **Emoji:** [Signature emoji, e.g., 🤖 💎 🚀]
-- **Avatar:** [Avatar URL or leave blank]
+Your identity information (name, team, vibe, emoji, avatar) is stored in `IDENTITY.md`. This file contains your core principles and team-specific personality.
 
 ---
 
