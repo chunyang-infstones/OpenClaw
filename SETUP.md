@@ -65,17 +65,20 @@ rm -rf clawd-template
 Your workspace now has the standard structure:
 ```
 ~/clawd/
-├── AGENTS.md          # Workspace rules (DO NOT MODIFY)
-├── BOOTSTRAP.md       # First-run instructions (DO NOT MODIFY)
-├── SOUL.md            # Agent identity & principles
-├── USER.md            # User profile
-├── TOOLS.md           # Local tool configurations
-├── HEARTBEAT.md       # Periodic task checklist
-├── memory/            # Daily logs
-├── skills/            # Agent skills
-├── scripts/           # Utility scripts
-├── canvas/            # Canvas assets
-└── team/              # Team workspace (your files go here)
+├── AGENTS.md            # 🔒 LOCKED - Workspace rules
+├── AGENT-CONFIG.md      # 📝 TEMPLATE - First-run config (delete after use)
+├── SOUL.md              # 🔒+✏️ LOCKED + CUSTOM - Identity & values
+├── IDENTITY.md          # ✏️ CUSTOM - Agent identity
+├── USER.md              # ✏️ CUSTOM - User/team profile
+├── TOOLS.md             # ✏️ CUSTOM - Tool configurations
+├── HEARTBEAT.md         # ✏️ CUSTOM - Periodic tasks
+├── MEMORY.md            # ✏️ CUSTOM - Long-term memory
+├── memory/              # Daily logs (YYYY-MM-DD.md)
+├── skills/              # Team-specific skills (branch-managed)
+│   └── master/          # Approved skills
+├── knowledge/           # Product knowledge (branch-managed)
+│   └── master/          # Approved knowledge
+└── canvas/              # Canvas assets
 ```
 
 ---
@@ -98,41 +101,30 @@ git push -u origin main
 
 ---
 
-## Step 5: Customize Your Agent
+## Step 5: Configure Your Agent
 
-### 5.1 Edit SOUL.md
+**Option 1: Use AGENT-CONFIG.md (Recommended)**
 
-Fill in the **Identity** section:
-```markdown
-## Identity (EDIT BELOW)
+Edit `~/clawd/AGENT-CONFIG.md` and fill in all sections, then send the agent:
 
-- **Name:** [Your agent's name]
-- **Team:** [Team ID, e.g., dev-dos, pro-pog]
-- **Creature:** AI assistant
-- **Emoji:** [Signature emoji]
-- **Avatar:** [Optional avatar URL]
+```
+Hello! Please read AGENT-CONFIG.md, configure yourself, and delete it.
 ```
 
-Fill in the **Team Customization** section:
-- Role Definition
-- Personality & Tone
-- Special Rules
-- Decision Authority
+The agent will:
+1. Read AGENT-CONFIG.md
+2. Populate IDENTITY.md, USER.md, SOUL.md, TOOLS.md, HEARTBEAT.md
+3. Delete AGENT-CONFIG.md
 
-### 5.2 Edit USER.md
+**Option 2: Manual Configuration**
 
-Add information about the primary user:
-- Name, role, timezone
-- Communication preferences
-- Key projects or responsibilities
+Directly edit these files:
 
-### 5.3 Edit TOOLS.md (Optional)
-
-Add any local tool configurations:
-- Camera names
-- SSH hosts
-- Voice preferences
-- API endpoints
+- **IDENTITY.md** — Name, team ID, emoji, avatar
+- **USER.md** — Who this agent serves, contact info, preferences
+- **SOUL.md** → **Team Customization** section — Role, personality, rules
+- **TOOLS.md** — API keys, channel IDs, tool configs
+- **HEARTBEAT.md** — Periodic tasks
 
 ---
 
@@ -186,18 +178,24 @@ ssh -L 18789:localhost:18789 user@your-vps-ip
 
 ### First Message
 
-Send this to trigger the bootstrap process:
+If using AGENT-CONFIG.md:
 
 ```
-Hello! I'm ready to begin. Please read BOOTSTRAP.md and complete the onboarding process.
+Hello! Please read AGENT-CONFIG.md, configure yourself, and delete it.
 ```
 
 The agent will:
-1. Read BOOTSTRAP.md
-2. Read and understand SOUL.md
-3. Introduce itself
-4. Delete BOOTSTRAP.md (it's no longer needed)
+1. Read AGENT-CONFIG.md
+2. Fill in IDENTITY.md, USER.md, SOUL.md, TOOLS.md, HEARTBEAT.md
+3. Delete AGENT-CONFIG.md
+4. Introduce itself
 5. Start normal operation
+
+If you manually configured files, just say hello:
+
+```
+Hello! What's your name?
+```
 
 ---
 

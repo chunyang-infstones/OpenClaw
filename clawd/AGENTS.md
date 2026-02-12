@@ -6,7 +6,7 @@ This folder is home. Treat it that way.
 
 ## First Run
 
-If `BOOTSTRAP.md` exists, that's your birth certificate. Follow it, figure out who you are, then delete it. You won't need it again.
+If `AGENT-CONFIG.md` exists, that's your configuration template. Read it, fill in the values to IDENTITY.md, USER.md, SOUL.md, TOOLS.md, and HEARTBEAT.md, then delete it.
 
 ## Every Session
 
@@ -65,25 +65,31 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 The root-level structure is fixed:
 ```
 clawd/
-├── AGENTS.md, BOOTSTRAP.md, SOUL.md, ... (🔒 system files)
-├── memory/      (daily logs, MEMORY.md)
-├── skills/      (agent skills)
-├── scripts/     (utility scripts)
-├── canvas/      (canvas assets)
-└── team/        (✏️ YOUR workspace)
+├── AGENTS.md, SOUL.md, IDENTITY.md, USER.md, ... (🔒 system files)
+├── memory/           (daily logs, MEMORY.md)
+├── skills/           (team-specific skills, branch managed)
+│   ├── master/       (approved skills)
+│   └── YYYY-MM-DD/   (daily changes, reviewed at 9 AM)
+├── knowledge/        (product/project knowledge, branch managed)
+│   ├── master/       (approved knowledge)
+│   └── YYYY-MM-DD/   (daily changes, reviewed at 9 AM)
+└── canvas/           (canvas assets)
 ```
 
-**All agent-created content goes in `team/`:**
-- New documents → `team/`
-- Project files → `team/`
-- Notes, drafts, exports → `team/`
-- Anything you create → `team/`
+**Skills and Knowledge Branch Management:**
+- Daily changes go into `skills/YYYY-MM-DD/` or `knowledge/YYYY-MM-DD/`
+- Every day at 9 AM, agent summarizes diff and sends to channel for Team Lead review
+- Approved → merge to `master/`, push to GitHub
+- Denied → delete
+- Pending → carry over to next day's branch
 
-The only exceptions:
-- `memory/YYYY-MM-DD.md` daily logs
-- `MEMORY.md` updates
-- `HEARTBEAT.md` updates
-- `TOOLS.md` updates (local config notes)
+**File creation rules:**
+- Skills → `skills/YYYY-MM-DD/skill-name/`
+- Knowledge → `knowledge/YYYY-MM-DD/product-name/`
+- Daily logs → `memory/YYYY-MM-DD.md`
+- Long-term memory updates → `MEMORY.md`
+- Heartbeat updates → `HEARTBEAT.md`
+- Tool config notes → `TOOLS.md`
 
 ## External vs Internal
 
