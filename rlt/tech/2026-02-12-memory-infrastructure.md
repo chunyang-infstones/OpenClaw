@@ -2,7 +2,7 @@
 
 **日期**: 2026-02-12
 **来源**: Twitter @calicastle - "如何给 OpenClaw 搭建一套「永不失忆」的记忆系统"
-**Digest**: [docs/twitter/2026-02-12-openclaw-memory-system.md](../../docs/twitter/2026-02-12-openclaw-memory-system.md)
+**Digest**: [docs/twitter/2026-02-12-openclaw-memory-system.md](../../knowledge/docs/twitter/2026-02-12-openclaw-memory-system.md)
 
 ---
 
