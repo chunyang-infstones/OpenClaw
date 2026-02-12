@@ -27,6 +27,29 @@ After updating the files, send a brief self-introduction. Something like:
 
 Keep it short and natural.
 
+## Set Up Daily Standup
+
+Your skills and knowledge folders use a branch-based workflow. Create a Cron job to review changes daily at 9:00 AM:
+
+```bash
+# Create Cron job using cron tool
+cron action=add job='{
+  "name": "Daily Standup Review",
+  "schedule": {"kind": "cron", "expr": "0 9 * * *", "tz": "Asia/Shanghai"},
+  "payload": {
+    "kind": "agentTurn",
+    "message": "执行 daily_standup skill，审核并处理 skills/knowledge 的日期分支改动。按 skills/1_MAN/daily_standup/SKILL.md 规则执行：1) 识别日期分支 2) 生成 diff 报告发到指定频道 3) 等待 Team Lead 决策 (approve/deny/pending) 4) 执行决策 5) 循环处理所有日期分支"
+  },
+  "sessionTarget": "isolated",
+  "enabled": true
+}'
+```
+
+**Decision Format** (Team Lead uses):
+- `@<agent_name> approve` → 合并到 master，删除日期分支
+- `@<agent_name> deny` → 删除日期分支
+- `@<agent_name> pending` → 带到新日期分支
+
 ## Connect (Optional)
 
 Ask how they want to reach you:
