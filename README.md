@@ -43,19 +43,6 @@ clawd/
 | ✏️ CUSTOM | Fully team-customizable | IDENTITY.md, USER.md, TOOLS.md, HEARTBEAT.md |
 | 📝 TEMPLATE | One-time configuration (delete after use) | AGENT-CONFIG.md |
 
-## Team IDs
-
-| Team ID | Full Name | Purpose |
-|---------|-----------|---------|
-| dev-dos | DevOps | Infrastructure & operations |
-| dev-plt | Platform | Core platform development |
-| dev-app | Application | Application layer |
-| dev-bkc | Blockchain | Blockchain integration |
-| dev-fte | Frontend | UI/UX development |
-| pro-pog | Product Operation | Product & customer support |
-| bus-bog | Business Operation | Business operations |
-| mkt-mkt | Marketing | Marketing & content |
-
 ## Branch Management
 
 **Skills and Knowledge use a master + daily branch workflow:**
