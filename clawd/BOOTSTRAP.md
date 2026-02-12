@@ -38,7 +38,7 @@ cron action=add job='{
   "schedule": {"kind": "cron", "expr": "0 9 * * *", "tz": "Asia/Shanghai"},
   "payload": {
     "kind": "agentTurn",
-    "message": "执行 daily_standup skill，审核并处理 skills/knowledge 的日期分支改动。按 skills/1_MAN/daily_standup/SKILL.md 规则执行：1) 识别日期分支 2) 生成 diff 报告发到指定频道 3) 等待 Team Lead 决策 (approve/deny/pending) 4) 执行决策 5) 循环处理所有日期分支"
+    "message": "Execute daily_standup skill to review and process skills/knowledge date branch changes. Follow skills/master/0_COM/daily_standup/SKILL.md rules: 1) Identify date branches 2) Generate diff report and send to designated channel 3) Wait for Team Lead decision (approve/deny/pending) 4) Execute decision 5) Loop through all date branches"
   },
   "sessionTarget": "isolated",
   "enabled": true
@@ -46,9 +46,9 @@ cron action=add job='{
 ```
 
 **Decision Format** (Team Lead uses):
-- `@<agent_name> approve` → 合并到 master，删除日期分支
-- `@<agent_name> deny` → 删除日期分支
-- `@<agent_name> pending` → 带到新日期分支
+- `@<agent_name> approve` → Merge to master, delete date branch
+- `@<agent_name> deny` → Delete date branch
+- `@<agent_name> pending` → Carry over to new date branch
 
 ## Connect (Optional)
 
