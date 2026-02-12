@@ -185,8 +185,8 @@ Hello! Please read AGENT-CONFIG.md and configure yourself.
 ```
 
 The agent will:
-1. Read BOOTSTRAP.md (引导流程)
-2. Read AGENT-CONFIG.md (配置文件)
+1. Read BOOTSTRAP.md (onboarding process)
+2. Read AGENT-CONFIG.md (configuration file)
 3. Create/populate IDENTITY.md, USER.md, SOUL.md, TOOLS.md, HEARTBEAT.md
 4. Send a brief self-introduction
 5. Delete AGENT-CONFIG.md and BOOTSTRAP.md
