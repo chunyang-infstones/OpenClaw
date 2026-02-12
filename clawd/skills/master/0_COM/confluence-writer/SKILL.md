@@ -1,28 +1,22 @@
-# Confluence Writer Skill
+---
+name: confluence-writer
+description: Write and update Confluence pages following InfStones formatting standards. Use when creating new pages, converting Markdown to Confluence format, or updating existing pages on the InfStones Confluence instance.
+---
+
+# Confluence Writer
 
 Write and update Confluence pages following InfStones formatting standards.
 
-## When to Use
+## Quick Start
 
-- Writing new Confluence pages
-- Converting Markdown files to Confluence format
-- Updating existing Confluence pages
+**Authentication**: Use email + API token from `~/.secrets.json` or TOOLS.md
 
-## Confluence API
-
-**Authentication:** Basic auth with email + API token
 ```bash
-curl -u "email:api_token" "https://infstones.atlassian.net/wiki/api/v2/..."
-```
-
-**Get page (with content):**
-```bash
+# Get page with content
 curl -s -u "$EMAIL:$TOKEN" \
   "https://infstones.atlassian.net/wiki/api/v2/pages/{PAGE_ID}?body-format=storage"
-```
 
-**Update page:**
-```bash
+# Update page
 curl -s -X PUT -u "$EMAIL:$TOKEN" \
   -H "Content-Type: application/json" \
   "https://infstones.atlassian.net/wiki/api/v2/pages/{PAGE_ID}" \
@@ -38,10 +32,8 @@ curl -s -X PUT -u "$EMAIL:$TOKEN" \
       "number": {CURRENT_VERSION + 1}
     }
   }'
-```
 
-**Create page:**
-```bash
+# Create page
 curl -s -X POST -u "$EMAIL:$TOKEN" \
   -H "Content-Type: application/json" \
   "https://infstones.atlassian.net/wiki/api/v2/pages" \
@@ -63,6 +55,7 @@ Reference: https://infstones.atlassian.net/wiki/spaces/COM/pages/94208146/Conflu
 ### 1. Table of Contents
 
 **ALWAYS start every page with TOC macro:**
+
 ```html
 <ac:structured-macro ac:name="toc" ac:schema-version="1">
   <ac:parameter ac:name="style">none</ac:parameter>
@@ -75,7 +68,7 @@ Reference: https://infstones.atlassian.net/wiki/spaces/COM/pages/94208146/Conflu
 
 ### 3. Headings
 
-**Format:** Number + Space + Title (NO bold on headings)
+**Format**: Number + Space + Title (NO bold on headings)
 
 | Level | Tag | Format | Example |
 |-------|-----|--------|---------|
@@ -92,6 +85,7 @@ Reference: https://infstones.atlassian.net/wiki/spaces/COM/pages/94208146/Conflu
 ### 4. Items Under Headings
 
 **Use `a)`, `b)`, `c)` for parallel items** (NOT `1.`, `2.`, `3.`):
+
 ```html
 <p><strong>a) Purpose:</strong> Description here</p>
 <p><strong>b) When loaded:</strong></p>
@@ -105,17 +99,19 @@ Reference: https://infstones.atlassian.net/wiki/spaces/COM/pages/94208146/Conflu
 ### 5. Bullet Lists
 
 Use `<ul><li><p>...</p></li></ul>` for sub-items under `a)`, `b)`, `c)`:
+
 ```html
 <p><strong>b) When loaded:</strong></p>
 <ul>
-  <li><p>✅ Every session start</p></li>
-  <li><p>❌ Not loaded in shared sessions</p></li>
+  <li><p>Every session start</p></li>
+  <li><p>Not loaded in shared sessions</p></li>
 </ul>
 ```
 
 ### 6. Code Blocks
 
 Use Confluence code macro with wide breakout:
+
 ```html
 <ac:structured-macro ac:name="code" ac:schema-version="1">
   <ac:parameter ac:name="language">bash</ac:parameter>
@@ -130,6 +126,7 @@ Use Confluence code macro with wide breakout:
 ### 7. Inline Code
 
 Use `<code>` tag:
+
 ```html
 <p>The file <code>MEMORY.md</code> contains sensitive data.</p>
 ```
@@ -137,6 +134,7 @@ Use `<code>` tag:
 ### 8. Tables
 
 Use Confluence table format:
+
 ```html
 <table data-table-width="760" data-layout="default">
   <tbody>
@@ -166,8 +164,6 @@ Use Confluence table format:
 ```
 
 ## Markdown to Confluence Conversion
-
-When converting Markdown to Confluence:
 
 | Markdown | Confluence |
 |----------|------------|
